@@ -1,9 +1,9 @@
 import React from 'react';
-import UseStateArray from './Practice/useState/useStateArray'
+import UseStateObject from './Practice/useState/useStateObject'
 function App() {
   return (
     <div className='container'>
-      <UseStateArray />
+      <UseStateObject />
     </div>
   )
 }

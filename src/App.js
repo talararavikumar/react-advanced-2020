@@ -1,11 +1,11 @@
 import React from 'react';
-import UseStateObject from './Practice/useState/useStateObject'
+import UseEffectFetch from './Practice/useState/useEffectFetch';
 function App() {
   return (
     <div className='container'>
-      <UseStateObject />
+      <UseEffectFetch />
     </div>
   )
 }
 
-export default App
+export default App;

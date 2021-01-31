@@ -1,9 +1,9 @@
 import React from 'react';
-import UseEffectFetch from './Practice/useState/useEffectFetch';
+import ControlledInputs from './Practice/controlled/controlledinputs.js';
 function App() {
   return (
     <div className='container'>
-      <UseEffectFetch />
+      <ControlledInputs />
     </div>
   )
 }

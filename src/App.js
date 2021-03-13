@@ -1,9 +1,10 @@
 import React from 'react';
 import CIWithSingleState from './Practice/controlled/CIWithSingleState.js';
+import UseRefPrac from './Practice/controlled/useRefPrac.js'
 function App() {
   return (
     <div className='container'>
-      <CIWithSingleState />
+      <UseRefPrac />
     </div>
   )
 }

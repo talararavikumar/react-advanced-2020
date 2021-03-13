@@ -1,9 +1,9 @@
 import React from 'react';
-import ControlledInputs from './Practice/controlled/controlledinputs.js';
+import CIWithSingleState from './Practice/controlled/CIWithSingleState.js';
 function App() {
   return (
     <div className='container'>
-      <ControlledInputs />
+      <CIWithSingleState />
     </div>
   )
 }

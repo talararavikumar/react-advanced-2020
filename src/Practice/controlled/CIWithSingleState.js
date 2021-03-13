@@ -14,7 +14,8 @@ const CIWithSingleState = () => {
         e.preventDefault();
 
         if(person.name && person.email && person.age){
-            setPeople([...people , {id:new Date().toString(),...person}])
+            setPeople([...people , {id:new Date().toString(),...person}]);
+            setPerson({name:'',age:'',email:''});
         }
     }
 
@@ -39,11 +40,11 @@ const CIWithSingleState = () => {
                 </form>
                 {
                     people.map((person, index) => {
-                        const { id, name, email, age } = person;
-                        return <div className="item" key={id}>
-                            <h4>{name}</h4>
-                            <p>{email}</p>
-                            <p>{age}</p>
+                        //const { id, name, email, age } = person;
+                        return <div className="item" key={person.id}>
+                            <h4>{person.name}</h4>
+                            <p>{person.email}</p>
+                            <p>{person.age}</p>
                         </div>
                     })
                 }

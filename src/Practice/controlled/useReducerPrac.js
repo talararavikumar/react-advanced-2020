@@ -1,4 +1,5 @@
-import React , {useReducer, useState}from 'react'
+import React , {useReducer, useState}from 'react';
+import Modal from './redux/Modal.js'
 
 const initialState = {
     isModelOpen: false,
@@ -7,7 +8,7 @@ const initialState = {
 }
 
 
-const reducer = (state, action) => {
+const itcanbeanything = (state, action) => {
 
     switch (action.type) {
         case 'Add_Item':
@@ -51,7 +52,7 @@ const reducer = (state, action) => {
 }
 
 export const UseReducerPrac = (props) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(itcanbeanything, initialState);
     const [name, setname] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -64,8 +65,15 @@ export const UseReducerPrac = (props) => {
         }
     }
 
+    const closeModal = () =>{
+        dispatch({type:'Close_Modal'})
+    }
+
     return (
         <>
+            { state.isModelOpen &&(<Modal sMessage = {state.sModelMessage}
+                  closeModal = {closeModal}
+            />)}
             <form onSubmit={handleSubmit} className="form">
                 <input value={name} type = "text"
                 onChange={(e)=>setname(e.target.value)}/>
